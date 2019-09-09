@@ -17,33 +17,33 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export const getPortfolio = () => [
-  {
-    id: uniqueId("portfolio_item"),
-    title: "Test Site",
-    relation: ["sites"],
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    imageUrl:
-      "https://xf5cp1dvpdp3alhqw1jg2xjh-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/unnamed-810x540.jpg"
-  },
-  {
-    id: uniqueId("portfolio_item"),
-    title: "Test Art",
-    relation: ["art"],
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate",
-    imageUrl:
-      "https://xf5cp1dvpdp3alhqw1jg2xjh-wpengine.netdna-ssl.com/wp-content/uploads/2013/08/Genes@Coop_Global_Nav1-1620x1080.jpg"
-  },
-  {
-    id: uniqueId("portfolio_item"),
-    title: "Test Art",
-    relation: ["art"],
-    content:
-      "At vqui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate",
-    imageUrl:
-      "https://xf5cp1dvpdp3alhqw1jg2xjh-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Screen-Shot-2019-05-01-at-3.20.27-PM-1620x1080.png"
-  }
+  // {
+  //   id: uniqueId("portfolio_item"),
+  //   title: "Test Site",
+  //   relation: ["sites"],
+  //   content:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //   imageUrl:
+  //     "https://xf5cp1dvpdp3alhqw1jg2xjh-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/unnamed-810x540.jpg"
+  // },
+  // {
+  //   id: uniqueId("portfolio_item"),
+  //   title: "Test Art",
+  //   relation: ["art"],
+  //   content:
+  //     "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate",
+  //   imageUrl:
+  //     "https://xf5cp1dvpdp3alhqw1jg2xjh-wpengine.netdna-ssl.com/wp-content/uploads/2013/08/Genes@Coop_Global_Nav1-1620x1080.jpg"
+  // },
+  // {
+  //   id: uniqueId("portfolio_item"),
+  //   title: "Test Art",
+  //   relation: ["art"],
+  //   content:
+  //     "At vqui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate",
+  //   imageUrl:
+  //     "https://xf5cp1dvpdp3alhqw1jg2xjh-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Screen-Shot-2019-05-01-at-3.20.27-PM-1620x1080.png"
+  // }
 ];
 
 export const getPages = () => [
