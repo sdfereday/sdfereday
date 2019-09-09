@@ -154,6 +154,11 @@ export const getPages = () => [
               <span className="tag">.NET</span>
             </dd>
           </dl>
+
+          <p>
+            Please feel free to{" "}
+            <a href="../files/CV.pdf">download a copy of my CV</a>.
+          </p>
         </div>
       </div>
     )
@@ -176,7 +181,11 @@ export const getPages = () => [
             </Obfuscate>
           </dd>
           <dd>
-            <a href="https://github.com/sdfereday" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/sdfereday"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faGithub} />
               <span className="tag">Github</span>
             </a>
