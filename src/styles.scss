@@ -25,6 +25,19 @@ body, html {
   box-sizing: border-box;
 }
 
+.asFlex {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: $ipadBreak) {
+    flex-direction: row;
+  }
+
+  &.alignStart {
+    align-items: flex-start;
+  }
+}
+
 .app {
   margin: 0 auto;
   max-width: $siteWidth;
@@ -49,11 +62,37 @@ h4 {
 p {
   margin-top: 0;
   margin-bottom: $defaultPad;
+  line-height: 1.5em;
 }
 
 dl, dd {
   padding: 0;
   margin: 0;
+}
+
+.btn {
+  &.asLink {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    text-transform: uppercase;
+    font-size: rem-calc(16);
+    color: $navDefault;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+      color: $navHover;
+    }
+  }
+}
+
+.profilePicture {
+  margin-right: $mediumPad;
+  margin-bottom: $defaultPad;
+  width: 192px;
+  height: auto;
 }
 
 .iconList {
@@ -146,7 +185,7 @@ dl, dd {
   }
 }
 
-.content a {
+.content p a {
   color: $navDefault;
   transition: all .2s;
   text-decoration: none;
@@ -256,7 +295,7 @@ dl, dd {
 .close:before, .close:after {
   position: absolute;
   left: 15px;
-  top: 30px;
+  top: 26px;
   content: ' ';
   height: 33px;
   width: 2px;

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import { NAV_TYPES } from "./consts";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 export const PortfolioPage = ({ items = [] }) => {
   const [justClosed, setJustClosed] = useState(null);
@@ -16,64 +18,81 @@ export const PortfolioPage = ({ items = [] }) => {
     setJustClosed(id);
   };
 
-  useEffect(() => {
-    const scrollTo = document.getElementById(justClosed);
-    if (!scrollTo) return;
+  useEffect(
+    () => {
+      const scrollTo = document.getElementById(justClosed);
+      if (!scrollTo) return;
 
-    scrollTo.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  }, [bigItem]);
-
-  return !bigItem ? (
-    <div className="items">
-      {items.length ? (
-        items.map(({ title, intro, thumbUrl, id }, i) => {
-          return (
-            <div
-              key={i}
-              id={id}
-              className={classNames("item", {
-                goBig: bigItem === id
-              })}
-            >
-              <div
-                className="imageWrapper"
-                onClick={() => handleOnContentItemClick(id)}
-              >
-                <div className="overlay" />
-                <img src={thumbUrl} alt={title} className="image" />
-              </div>
-              <div className="content">{intro}</div>
-            </div>
-          );
-        })
-      ) : (
-        <div className="content">
-          <p>No results.</p>
-        </div>
-      )}
-    </div>
-  ) : (
-    <div className="page">
-      <button
-        className="close"
-        onClick={() => handleOnBigItemClose(bigItem.id)}
-      >
-        {" "}
-      </button>
-      <img src={bigItem.imageUrl} alt={bigItem.title} className="largeImage" />
-      <h2 className="title">{bigItem.title}</h2>
-      <div className="content">{bigItem.content}</div>
-    </div>
+      scrollTo.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    },
+    [bigItem]
   );
+
+  return !bigItem
+    ? <div className="items">
+        {items.length
+          ? items.map(({ title, intro, thumbUrl, id }, i) => {
+              return (
+                <div
+                  key={i}
+                  id={id}
+                  className={classNames("item", {
+                    goBig: bigItem === id
+                  })}
+                >
+                  <div
+                    className="imageWrapper"
+                    onClick={() => handleOnContentItemClick(id)}
+                  >
+                    <div className="overlay" />
+                    <img src={thumbUrl} alt={title} className="image" />
+                  </div>
+                  <div className="content">
+                    {intro}{" "}
+                    <button
+                      className="btn asLink"
+                      onClick={() => handleOnContentItemClick(id)}
+                    >
+                      More <FontAwesomeIcon icon={faAngleRight} />
+                    </button>
+                  </div>
+                </div>
+              );
+            })
+          : <div className="content">
+              <p>No results.</p>
+            </div>}
+      </div>
+    : <div className="page">
+        <button
+          className="close"
+          onClick={() => handleOnBigItemClose(bigItem.id)}
+        >
+          {" "}
+        </button>
+        <img
+          src={bigItem.imageUrl}
+          alt={bigItem.title}
+          className="largeImage"
+        />
+        <h2 className="title">
+          {bigItem.title}
+        </h2>
+        <div className="content">
+          {bigItem.content}
+        </div>
+      </div>;
 };
 
 export const ContentPage = ({ pageData = { title: "", content: "" } }) => {
   return (
     <div className="page">
-      <div className="content">{pageData.content}</div>
+      <div className="content">
+        {pageData.content}
+      </div>
     </div>
   );
 };

@@ -13,7 +13,8 @@ import {
   faReact,
   faJs,
   faGithub,
-  faWordpress
+  faWordpress,
+  faMicrosoft
 } from "@fortawesome/free-brands-svg-icons";
 
 export const getPortfolio = () => [
@@ -21,7 +22,8 @@ export const getPortfolio = () => [
     id: uniqueId("portfolio_item"),
     title: "Windermere Suites",
     relation: ["sites"],
-    intro: "Site for the award winning Windermere Suites hotel in the lake district.",
+    intro:
+      "Site for the award winning Windermere Suites hotel in the lake district.",
     content: (
       <React.Fragment>
         <p>
@@ -31,6 +33,7 @@ export const getPortfolio = () => [
             href="https://www.neilburnett.co.uk/"
             title="Burnett Design"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Burnett Design
           </a>.
@@ -41,6 +44,7 @@ export const getPortfolio = () => [
             href="https://www.windermeresuites.co.uk/"
             title="Windermere Suites"
             target="_blank"
+            rel="noopener noreferrer"
           >
             View Site
           </a>
@@ -54,18 +58,23 @@ export const getPortfolio = () => [
     id: uniqueId("portfolio_item"),
     title: "Blacks Solicitors",
     relation: ["sites"],
-    intro: "Site developed for Blacks Solicitors who provide a multitude of services across the UK.",
+    intro:
+      "Site developed for Blacks Solicitors who provide a multitude of services across the UK.",
     content: (
       <React.Fragment>
-        <p>Site developed for Blacks Solicitors who provide a multitude of services across the UK. Developed using wordpress and designed by{" "}
+        <p>
+          Site developed for Blacks Solicitors who provide a multitude of
+          services across the UK. Developed using wordpress and designed by{" "}
           <a
             href="https://www.neilburnett.co.uk/"
             title="Burnett Design"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Burnett Design
-          </a>. A lot of work was done based around different types of queries and content relationships which led to some interesting challenges when it came to 
-          setting up searches, sub page linking, etc.
+          </a>. A lot of work was done based around different types of queries
+          and content relationships which led to some interesting challenges
+          when it came to setting up searches, sub page linking, etc.
         </p>
 
         <p>
@@ -73,6 +82,7 @@ export const getPortfolio = () => [
             href="https://www.lawblacks.com/"
             title="Blacks Solicitors"
             target="_blank"
+            rel="noopener noreferrer"
           >
             View Site
           </a>
@@ -89,50 +99,63 @@ export const getPages = () => [
     id: "about",
     title: "About",
     content: (
-      <React.Fragment>
-        <p>
-          Coming from a self-taught background, over the years I've jumped from
-          strength to strength fulfilling both an insatiable curiosity and
-          desire to learn, especially when it comes to technology.
-        </p>
+      <div className="asFlex alignStart">
+        <img
+          src="../images/profile.png"
+          alt="Sam Fereday - Freelance Web Developer"
+          className="profilePicture"
+        />
 
-        <p>
-          For the most part programming has been my main interest over the
-          years, but more recently I decided to train my creative skills at
-          Falmouth University where I can work on bringing development and
-          creativity together.
-        </p>
+        <div>
+          <p>
+            Coming from a self-taught background, over the years I've jumped
+            from strength to strength fulfilling both an insatiable curiosity
+            and desire to learn, especially when it comes to technology.
+          </p>
 
-        <p>
-          Development still offers an endless supply of new endeavours however
-          and I'm always looking forward to what can be learnt and crafted next.
-        </p>
+          <p>
+            For the most part programming has been my main interest over the
+            years, but more recently I decided to train my creative skills at
+            Falmouth University where I can work on bringing development and
+            creativity together.
+          </p>
 
-        <p>I work primarily with the following:</p>
+          <p>
+            Development still offers an endless supply of new endeavours however
+            and I'm always looking forward to what can be learnt and crafted
+            next.
+          </p>
 
-        <dl className="iconList asFlex">
-          <dd>
-            <FontAwesomeIcon icon={faReact} />
-            <span className="tag">React</span>
-          </dd>
-          <dd>
-            <FontAwesomeIcon icon={faJs} />
-            <span className="tag">JavaScript</span>
-          </dd>
-          <dd>
-            <FontAwesomeIcon icon={faWordpress} />
-            <span className="tag">Wordpress</span>
-          </dd>
-          <dd>
-            <FontAwesomeIcon icon={faCode} />
-            <span className="tag">C# (Unity3D)</span>
-          </dd>
-          <dd>
-            <FontAwesomeIcon icon={faFileCode} />
-            <span className="tag">CSS / HTML</span>
-          </dd>
-        </dl>
-      </React.Fragment>
+          <p>I work primarily with the following:</p>
+
+          <dl className="iconList">
+            <dd>
+              <FontAwesomeIcon icon={faFileCode} />
+              <span className="tag">CSS / HTML</span>
+            </dd>
+            <dd>
+              <FontAwesomeIcon icon={faReact} />
+              <span className="tag">React</span>
+            </dd>
+            <dd>
+              <FontAwesomeIcon icon={faJs} />
+              <span className="tag">JavaScript</span>
+            </dd>
+            <dd>
+              <FontAwesomeIcon icon={faWordpress} />
+              <span className="tag">Wordpress</span>
+            </dd>
+            <dd>
+              <FontAwesomeIcon icon={faCode} />
+              <span className="tag">C# (Unity3D)</span>
+            </dd>
+            <dd>
+              <FontAwesomeIcon icon={faMicrosoft} />
+              <span className="tag">.NET</span>
+            </dd>
+          </dl>
+        </div>
+      </div>
     )
   },
   {
@@ -145,7 +168,7 @@ export const getPages = () => [
           projects that I've worked on over the years you can find them on my
           Github page:
         </p>
-        <dl className="iconList asFlex">
+        <dl className="iconList">
           <dd>
             <Obfuscate email="sdfereday.dev@gmail.com">
               <FontAwesomeIcon icon={faEnvelope} />
@@ -153,7 +176,7 @@ export const getPages = () => [
             </Obfuscate>
           </dd>
           <dd>
-            <a href="https://github.com/sdfereday" target="_blank">
+            <a href="https://github.com/sdfereday" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub} />
               <span className="tag">Github</span>
             </a>
