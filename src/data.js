@@ -91,7 +91,31 @@ export const getPortfolio = () => [
     ),
     imageUrl: "../images/blacks.png",
     thumbUrl: "../images/blacksthumb.png"
-  }
+  },
+  // Template to use
+  // {
+  //   id: uniqueId("portfolio_item"),
+  //   title: "Site Title",
+  //   relation: ["sites"],
+  //   intro: "Intro text goes here...",
+  //   content: (
+  //     <React.Fragment>
+  //       <p>Site content goes here.</p>
+  //       <p>
+  //         <a
+  //           href="https://www.google.com"
+  //           title="Site Title"
+  //           target="_blank"
+  //           rel="noopener noreferrer"
+  //         >
+  //           View Site
+  //         </a>
+  //       </p>
+  //     </React.Fragment>
+  //   ),
+  //   imageUrl: "../images/",
+  //   thumbUrl: "../images/"
+  // }
 ];
 
 export const getPages = () => [
