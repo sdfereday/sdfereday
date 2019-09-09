@@ -49,6 +49,38 @@ export const getPortfolio = () => [
     ),
     imageUrl: "../images/winsuites.png",
     thumbUrl: "../images/winsuitesthumb.png"
+  },
+  {
+    id: uniqueId("portfolio_item"),
+    title: "Blacks Solicitors",
+    relation: ["sites"],
+    intro: "Site developed for Blacks Solicitors who provide a multitude of services across the UK.",
+    content: (
+      <React.Fragment>
+        <p>Site developed for Blacks Solicitors who provide a multitude of services across the UK. Developed using wordpress and designed by{" "}
+          <a
+            href="https://www.neilburnett.co.uk/"
+            title="Burnett Design"
+            target="_blank"
+          >
+            Burnett Design
+          </a>. A lot of work was done based around different types of queries and content relationships which led to some interesting challenges when it came to 
+          setting up searches, sub page linking, etc.
+        </p>
+
+        <p>
+          <a
+            href="https://www.lawblacks.com/"
+            title="Blacks Solicitors"
+            target="_blank"
+          >
+            View Site
+          </a>
+        </p>
+      </React.Fragment>
+    ),
+    imageUrl: "../images/blacks.png",
+    thumbUrl: "../images/blacksthumb.png"
   }
 ];
 
