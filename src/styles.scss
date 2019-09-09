@@ -8,6 +8,8 @@ $contentDefault: #444;
 $navDefault: #777;
 $navHover: #111;
 
+$ipadBreak: 768px;
+
 @function rem-calc($size) {
   $remSize: $size / 16;
   @return #{$remSize}rem;
@@ -26,9 +28,13 @@ body, html {
 .app {
   margin: 0 auto;
   max-width: $siteWidth;
-  padding: $hugePad $hugePad 0;
+  padding: $hugePad $defaultPad 0;
   font-family: sans-serif;
   font-size: 1em;
+  
+  @media only screen and (min-width: $ipadBreak) {
+    padding: $hugePad $hugePad 0;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -54,6 +60,11 @@ dl, dd {
   padding-top: $defaultPad;
   padding-bottom: $defaultPad;
   display: flex;
+  flex-wrap: wrap;
+
+  @media only screen and (min-width: $ipadBreak) {
+    flex-wrap: nowrap;
+  }
 
   a {
     text-decoration: none;
@@ -73,6 +84,8 @@ dl, dd {
 
   dd {
     width: 100%;
+    flex-basis: 50%;
+    padding-bottom: $defaultPad;
     text-align: center;
   }
 }
@@ -83,7 +96,11 @@ dl, dd {
 
 .bigHeader {
   padding: 0 0 $mediumPad;
-  font-size: rem-calc(48);
+  font-size: rem-calc(32);
+
+  @media only screen and (min-width: $ipadBreak) {
+    font-size: rem-calc(48);
+  }
 }
 
 .largeImage {
@@ -113,11 +130,15 @@ dl, dd {
     border: 0;
     outline: none;
     text-decoration: none;
-    font-size: rem-calc(28);
+    font-size: rem-calc(18);
     font-weight: 700;
     color: $navDefault;
     transition: all .2s;
     cursor: pointer;
+
+    @media only screen and (min-width: $ipadBreak) {
+      font-size: rem-calc(28);
+    }
 
     &:hover, &.active {
       color: $navHover;
@@ -132,19 +153,19 @@ dl, dd {
   flex-wrap: wrap;
 
   .item {
-    flex-basis: 50%;
+    flex-basis: 100%;
     position: relative;
 
-    &.goBig {
-      border: 1px solid red;
-    }
+    @media only screen and (min-width: $ipadBreak) {
+      flex-basis: 50%;
 
-    &:nth-of-type(odd) {
-      padding-right: $mediumPad / 2;
-    }
-    
-    &:nth-of-type(even) {
-      padding-left: $mediumPad / 2;
+      &:nth-of-type(odd) {
+        padding-right: $mediumPad / 2;
+      }
+      
+      &:nth-of-type(even) {
+        padding-left: $mediumPad / 2;
+      }
     }
 
     .overlay {
@@ -192,7 +213,11 @@ dl, dd {
   padding-bottom: $hugePad * 2;
 
   .content {
-    width: 50%;
+    width: 100%;
+
+    @media only screen and (min-width: $ipadBreak) {
+      max-width: 960px;
+    }
   }
 
   .title {

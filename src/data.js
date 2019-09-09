@@ -13,7 +13,6 @@ import {
   faReact,
   faJs,
   faGithub,
-  faArtstation,
   faWordpress
 } from "@fortawesome/free-brands-svg-icons";
 
