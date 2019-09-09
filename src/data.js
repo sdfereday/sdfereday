@@ -132,6 +132,8 @@ export const getPages = () => [
             <span className="tag">CSS / HTML</span>
           </dd>
         </dl>
+
+        Please feel free to <a href="../files/CV.pdf">download a copy of my CV</a>.
       </React.Fragment>
     )
   },
