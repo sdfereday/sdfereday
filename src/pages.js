@@ -29,7 +29,7 @@ export const PortfolioPage = ({ items = [] }) => {
   return !bigItem ? (
     <div className="items">
       {items.length ? (
-        items.map(({ title, content, imageUrl, id }, i) => {
+        items.map(({ title, intro, thumbUrl, id }, i) => {
           return (
             <div
               key={i}
@@ -43,9 +43,9 @@ export const PortfolioPage = ({ items = [] }) => {
                 onClick={() => handleOnContentItemClick(id)}
               >
                 <div className="overlay" />
-                <img src={imageUrl} alt={title} className="image" />
+                <img src={thumbUrl} alt={title} className="image" />
               </div>
-              <div className="content">{content}</div>
+              <div className="content">{intro}</div>
             </div>
           );
         })
