@@ -157,7 +157,9 @@ export const getPages = () => [
 
           <p>
             Please feel free to{" "}
-            <a href="../files/CV.pdf">download a copy of my CV</a>.
+            <a href="../files/CV.pdf" target="_blank" rel="noopener noreferrer">
+              download a copy of my CV
+            </a>.
           </p>
         </div>
       </div>
