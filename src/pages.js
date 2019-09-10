@@ -21,7 +21,10 @@ export const PortfolioPage = ({ items = [] }) => {
   useEffect(
     () => {
       const scrollTo = document.getElementById(justClosed);
-      if (!scrollTo) return;
+      if (!scrollTo) {
+        window.scrollTo(0, 0);
+        return;
+      }
 
       scrollTo.scrollIntoView({
         behavior: "smooth",

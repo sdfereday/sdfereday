@@ -51,8 +51,8 @@ export const getPortfolio = () => [
         </p>
       </React.Fragment>
     ),
-    imageUrl: "../images/winsuites.png",
-    thumbUrl: "../images/winsuitesthumb.png"
+    imageUrl: "../images/winsuites.jpg",
+    thumbUrl: "../images/winsuites.jpg"
   },
   {
     id: uniqueId("portfolio_item"),
@@ -89,33 +89,178 @@ export const getPortfolio = () => [
         </p>
       </React.Fragment>
     ),
-    imageUrl: "../images/blacks.png",
-    thumbUrl: "../images/blacksthumb.png"
+    imageUrl: "../images/blacks.jpg",
+    thumbUrl: "../images/blacks.jpg"
   },
-  // Template to use
-  // {
-  //   id: uniqueId("portfolio_item"),
-  //   title: "Site Title",
-  //   relation: ["sites"],
-  //   intro: "Intro text goes here...",
-  //   content: (
-  //     <React.Fragment>
-  //       <p>Site content goes here.</p>
-  //       <p>
-  //         <a
-  //           href="https://www.google.com"
-  //           title="Site Title"
-  //           target="_blank"
-  //           rel="noopener noreferrer"
-  //         >
-  //           View Site
-  //         </a>
-  //       </p>
-  //     </React.Fragment>
-  //   ),
-  //   imageUrl: "../images/",
-  //   thumbUrl: "../images/"
-  // }
+  {
+    id: uniqueId("portfolio_item"),
+    title: "Shire Homes",
+    relation: ["sites"],
+    intro:
+      "Developed for Shire Homes who provide building services across Cumbria.",
+    content: (
+      <React.Fragment>
+        <p>
+          This site was built from designs supplied by{" "}
+          <a
+            href="https://www.neilburnett.co.uk/"
+            title="Burnett Design"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Burnett Design
+          </a>{" "}
+          and had some interesting challenges when it came to constructing the
+          background elements across the site. Like many of the other projects,
+          this one uses WordPress.
+        </p>
+        <p>
+          <a
+            href="https://www.shire-homes.co.uk"
+            title="Shire Homes"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Site
+          </a>
+        </p>
+      </React.Fragment>
+    ),
+    imageUrl: "../images/shire.jpg",
+    thumbUrl: "../images/shire.jpg"
+  },
+  {
+    id: uniqueId("portfolio_item"),
+    title: "Bigland Hall",
+    relation: ["sites"],
+    intro:
+      "Site developed for Bigland Hall who provide luxury cottages in the Lake District.",
+    content: (
+      <React.Fragment>
+        <p>
+          Designs supplied by{" "}
+          <a
+            href="https://www.neilburnett.co.uk/"
+            title="Burnett Design"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Burnett Design
+          </a>, this was one of the first sites I worked on in a freelance
+          setting and allowed for one to really get to grips with WordPress.
+        </p>
+        <p>
+          <a
+            href="https://www.biglandhallcottages.co.uk"
+            title="Bigland Hall Cottages"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Site
+          </a>
+        </p>
+      </React.Fragment>
+    ),
+    imageUrl: "../images/bigland.jpg",
+    thumbUrl: "../images/bigland.jpg"
+  },
+  {
+    id: uniqueId("portfolio_item"),
+    title: "Enjoy Mull",
+    relation: ["sites"],
+    intro:
+      "Designed and built for Enjoy Mull who run wildlife tours and accommodation on the Isle of Mull.",
+    content: (
+      <React.Fragment>
+        <p>
+          Enjoy Mull was designed and built by myself, originally it had a
+          different plugin to manage custom elements for building the pages.
+          However after discovering ACF (Advanced Custom Fields), things got a
+          whole lot easier. I continue to maintain this site updating and
+          optimizing where possible.
+        </p>
+        <p>
+          <a
+            href="https://www.enjoymull.co.uk"
+            title="Enjoy Mull"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Site
+          </a>
+        </p>
+      </React.Fragment>
+    ),
+    imageUrl: "../images/enjoymull.jpg",
+    thumbUrl: "../images/enjoymull.jpg"
+  },
+  {
+    id: uniqueId("portfolio_item"),
+    title: "Sussex Garden School",
+    relation: ["sites"],
+    intro:
+      "Site developed for Sussex Garden School who provide gardening courses a numerous venues.",
+    content: (
+      <React.Fragment>
+        <p>
+          <a
+            href="https://www.neilburnett.co.uk/"
+            title="Burnett Design"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Burnett Design
+          </a>{" "}
+          approached me to build Sussex Garden School in WordPress, with it
+          being one of the first sites I'd work on in a freelance setting it
+          definitely had some interesting challenges lined up. Overall very
+          happy with the result.
+        </p>
+        <p>
+          <a
+            href="https://www.sussexgardenschool.com"
+            title="Sussex Garden School"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Site
+          </a>
+        </p>
+      </React.Fragment>
+    ),
+    imageUrl: "../images/sussex.jpg",
+    thumbUrl: "../images/sussex.jpg"
+  },
+  {
+    id: uniqueId("portfolio_item"),
+    title: "Fiona Clucas",
+    relation: ["sites"],
+    intro:
+      "A site designed and built for Fiona Clucas, a wildlife and nature artist in Cumbria.",
+    content: (
+      <React.Fragment>
+        <p>
+          This was a site designed and built by myself, it also makes use of
+          some custom JavaScript that queries the WordPress API. I was very
+          interested in how well the API had been built and the results ended up
+          being quite pleasing. The backend is running WordPress and the front
+          end has a mixture of both PHP and JavaScript to handle API queries.
+        </p>
+        <p>
+          <a
+            href="https://www.fiona-clucas.co.uk"
+            title="Fiona Clucas"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Site
+          </a>
+        </p>
+      </React.Fragment>
+    ),
+    imageUrl: "../images/fclucas.jpg",
+    thumbUrl: "../images/fclucas.jpg"
+  }
 ];
 
 export const getPages = () => [
