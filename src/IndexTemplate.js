@@ -27,8 +27,8 @@ export default ({
         <h1 className="bigHeader">{activeNavItem.title}</h1>
       )}
       <nav className="navigation">
-        {navigationData.map(({ id, title, type }) => {
-          return (
+        {navigationData.map(({ id, title, type, hideFromNav = false }) => {
+          return !hideFromNav ? (
             <button
               key={id}
               className={classNames("link", {
@@ -38,7 +38,7 @@ export default ({
             >
               {title}
             </button>
-          );
+          ) : null;
         })}
       </nav>
       <PageComponents

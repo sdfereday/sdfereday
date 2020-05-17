@@ -11,7 +11,7 @@ export default () => {
 
   const [activeNavItem, setActiveNavItem] = useState(DEFAULT_ITEM);
   const [activeFilter, setActiveFilter] = useState(DEFAULT_ITEM.id);
-  const [activePage, setActivePage] = useState(DEFAULT_ITEM.id);
+  const [activePage, setActivePage] = useState(pageData.find(item => item.id === DEFAULT_ITEM.id));
 
   const [filteredItems, setFilteredItems] = useState([]);
 

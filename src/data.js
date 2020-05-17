@@ -265,6 +265,17 @@ export const getPortfolio = () => [
 
 export const getPages = () => [
   {
+    id: "demo",
+    title: "RPG Demo",
+    content: (
+      <React.Fragment>
+        <h3>RPG Prototype</h3>
+        <p><em>Written in Unity</em></p>
+        <iframe src="https://itch.io/embed/646707" id="game_drop" frameBorder="0"><a href="https://jamnoodle.itch.io/rpg-prototype">RPG Prototype by jamnoodle</a></iframe>
+      </React.Fragment>
+    )
+  },
+  {
     id: "about",
     title: "About",
     content: (
